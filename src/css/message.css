@@ -1,0 +1,61 @@
+.message {
+  margin-top: 1em;
+  background-color: #ffffff;
+  border-radius: 0.4em;
+  padding: 0 1em;
+  box-shadow: 0px 0.5px 0px 1px #ececec;
+}
+.message .message__container form .message__top {
+  border-bottom: 1px solid #eeeeee;
+  padding: 1em 0;
+  display: flex;
+}
+.message .message__container form .message__top .message__profile__avatar {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+.message .message__container form .message__top input {
+  width: 100%;
+  background-color: #f0f2f5;
+  border-radius: 2em;
+  border: none;
+  outline: none;
+  padding: 1em;
+}
+.message .message__container form .message__bottom {
+  padding: 0.5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message .message__container form .message__bottom label {
+  font-weight: 600;
+  color: #4b4b4b;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.message .message__container form .message__bottom label:hover {
+  background-color: #eeeeee;
+  border-radius: 0.4em;
+}
+.message .message__container form .message__bottom label .photo__or__video__icon {
+  color: #00cf60;
+  font-size: 1.7em;
+  margin-right: 0.5em;
+}
+.message .message__container form .message__bottom input {
+  display: none;
+}
+.message .message__container form button {
+  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=message.css.map */

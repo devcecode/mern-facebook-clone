@@ -1,0 +1,36 @@
+.history {
+  cursor: pointer;
+  width: 16%;
+  height: 200px;
+  border-radius: 1em;
+  overflow: hidden;
+  position: relative;
+  background-color: #e4e5eb;
+  &:hover .image {
+    transform: scale(1.05);
+    filter: blur(.5px);
+  }
+  .history__profile__avatar, .username {
+    position: absolute;
+    left: 0;
+    z-index: 10000;
+  }
+  .username {
+    bottom: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    left: 10px;
+  }
+  .history__profile__avatar {
+    width: 40px;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+  }
+  .image {
+    transition: .5s all;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

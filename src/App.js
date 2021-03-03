@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './Header'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+
+import Main from './Main'
+import Friends from './Friends'
+import Watch from './Watch'
+import Marketplace from './Marketplace'
+
+const App = () => {
+
+  const initialState = {
+    posts: [],
+    active: ''
+  }
+
+  const reducer = (state, action) => {
+    if(action.type === 'SET_POSTS') {
+      return {...state, posts: action.data}
+    }
+
+    if(action.type === 'SET_ACTIVE') {
+      return {...state, active: action.current}
+    }
+    
+    return state
+  }
+  const store = createStore(reducer, initialState)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="app">
+        {/* Header */}
+
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Main />
+            </Route>
+            <Route exact path="/friends">
+              <Friends />
+            </Route>
+            <Route exact path="/watch">
+              <Watch />
+            </Route>
+            <Route exact path="/marketplace">
+              <Marketplace />
+            </Route>
+          </Switch>
+        </Router>
+
+        
+      </div>
+    </Provider>
   );
 }
 
-export default App;
+export default App
