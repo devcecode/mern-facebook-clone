@@ -44,7 +44,7 @@ const Message = () => {
             <input
               type="text"
               name="description"
-              placeholder="¿Qué estás pensando Devce Code?"
+              placeholder="escribe algo genial, selecciona la mejor imagen, presiona enter y Boom Magia!!!"
               value={descriptionInput}
               onChange={e => setDescriptionInput(e.target.value)}
             />

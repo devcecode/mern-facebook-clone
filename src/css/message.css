@@ -23,6 +23,10 @@
   outline: none;
   padding: 1em;
 }
+.message .message__container form .message__top input::placeholder {
+  font-weight: 600;
+  font-size: 1em;
+}
 .message .message__container form .message__bottom {
   padding: 0.5em 0;
   display: flex;

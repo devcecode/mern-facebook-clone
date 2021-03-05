@@ -44,7 +44,7 @@ const Post = ({description, files, timestamp}) => {
         {files.map((f) => (
           <img
             key={f.originalname}
-            src={`https://devce-mern-facebook-app.herokuapp.com/statics/files/${f.originalname}`}
+            src={f.secure_url}
             alt=""
           />
         ))}

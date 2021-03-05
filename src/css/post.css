@@ -72,9 +72,6 @@
   background-color: #ffffff;
   cursor: pointer;
 }
-.post .post__footer button:first-child {
-  border-right: 1px solid #e6e6e6;
-}
 .post .post__footer button .post__footer__icon {
   margin-right: 0.5em;
 }
